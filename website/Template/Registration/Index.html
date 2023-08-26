@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+        /* background-image: url("../Media/HR.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 15% auto auto 20%;
+        height: 100%;
+      margin: 0;
+      padding: 0; */
+    }
+
+    .imageContainer {
+      height: 100%;
+      width: 100%;
+       background-image: url(../Media/background1.jpg);
+
+ }
+    
+    .container1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 98%;
+      height: 80px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+.btn {
+      
+      margin-left:25px;
+      display: inline-block;
+      width:20%;
+      padding: 50px 35px;
+      background-color:white ;
+      color: #D03737;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 50px;
+   
+      animation: bounce .8s;
+    
+    }
+ 
+  .btn-5 {
+  border: 0 solid;
+  
+  outline: 2px solid;
+  outline-color: #0C1248;;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px 5px #D03737;
+  outline-offset: 5px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+@keyframes bounce {
+  to { transform: scale(0.90); }
+}
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    .message{
+      margin-inline: 15px;
+      color:#0C1248 ;
+
+    }
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+    }
+    .clearfix:after,
+    .clearfix:before {
+      content: "";
+      display: table;
+    }
+    .clearfix:after {
+      clear: both;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .login-wrap {
+      width: 100%;
+      margin: auto;
+      max-width: 525px;
+      min-height: 850px;
+      position: relative;
+      
+      box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    .login-html {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 90px 70px 50px 70px;
+      background: #ffff;
+    }
+    .login-html .sign-in-htm,
+    .login-html .sign-up-htm {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+      transition: all 0.4s linear;
+    }
+    .login-html .sign-in,
+    .login-html .sign-up,
+    .login-form .group .check {
+      display: none;
+    }
+    .login-html .tab,
+    .login-form .group .label,
+    .login-form .group .button {
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .login-html .tab {
+      font-size: 22px;
+      margin-right: 15px;
+      cursor: pointer;
+      padding-bottom: 5px;
+      margin: 0 15px 10px 0;
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+    }
+    .login-html .sign-in:checked + .tab,
+    .login-html .sign-up:checked + .tab {
+      color: #0C1248;
+      border-color: #1161ee;
+      cursor: pointer;
+    }
+    .login-form {
+      min-height: 345px;
+      position: relative;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+    .login-form .group {
+      margin-bottom: 15px;
+    }
+    .login-form .group .label,
+    .login-form .group .input,
+    .login-form .group .button {
+      width: 100%;
+      color: #fff;
+      display: block;
+    }
+    .login-form .group .input,
+    .login-form .group .button {
+      display: inline-block;
+      width:100%;
+      padding: 15px 20px;
+      background-color:white ;
+      color: #0C1248;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 50px;
+      border: 0 solid;
+  
+  outline: 2px solid;
+  outline-color: #0C1248;;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+      animation: bounce .8s;
+    }
+    .login-form .group input[data-type="password"] {
+      -webkit-text-security: circle;
+    }
+    .login-form .group .label {
+      color: #D03737;
+      font-size: 12px;
+    }
+    .login-form .group .button {
+      color: #D03737;
+      background: white;
+      cursor: pointer;
+    }
+    .login-form .group .button:hover {
+        border-radius: 25px;
+  box-shadow: 5px 5px 5px 5px #D03737;
+  outline-offset: 5px;
+  text-shadow: 1px 1px 2px #427388; 
+      }
+    .login-form .group label .icon {
+      width: 15px;
+      height: 15px;
+      border-radius: 2px;
+      position: relative;
+      display: inline-block;
+      background: #D03737;
+    }
+    .login-form .group label .icon:before,
+    .login-form .group label .icon:after {
+      content: "";
+      width: 10px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      transition: all 0.2s ease-in-out 0s;
+    }
+    .login-form .group label .icon:before {
+      left: 3px;
+      width: 5px;
+      bottom: 6px;
+      transform: scale(0) rotate(0);
+    }
+    .login-form .group label .icon:after {
+      top: 6px;
+      right: 0;
+      transform: scale(0) rotate(0);
+    }
+    .login-form .group .check:checked + label {
+      color: #D03737;
+    }
+    .login-form .group .check:checked + label .icon {
+      background: #D03737;
+    }
+    .login-form .group .check:checked + label .icon:before {
+      transform: scale(1) rotate(45deg);
+    }
+    .login-form .group .check:checked + label .icon:after {
+      transform: scale(1) rotate(-45deg);
+    }
+    .login-html
+      .sign-in:checked
+      + .tab
+      + .sign-up
+      + .tab
+      + .login-form
+      .sign-in-htm {
+      transform: rotate(0);
+    }
+    .login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+      transform: rotate(0);
+    }
+    
+    .hr {
+      height: 2px;
+      margin: 60px 0 50px 0;
+      background: #0C1248;
+    }
+    .foot-lnk {
+      text-align: center;
+      color: #D03737;
+    }
+    /* Adjust the icon styles as needed */
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <br>
+      <a href="Master.html"><img  src="../Media/RE2.png" alt="Logo"></a>
+    </div>
+    <div class="message">
+      Welcome Amreen Shaikh
+    </div>
+    <div class="icons">
+      <div class="icon">
+        <img src="../Media/Notify.png" alt="Notification">
+      </div>
+      <div class="icon">
+        <img src="../Media/search.png" alt="Search">
+      </div>
+      <div class="icon">
+        <img src="../Media/login.png" alt="Login">
+      </div>
+    </div>
+  </div>
+</style>
+<div class="imageContainer">
+ 
+  <div class="login-wrap">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Log In</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Create Account</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <div class="group">
+            <label for="user" class="label">Company Email</label>
+            <input id="user" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Password</label>
+            <input id="pass" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <input id="check" type="checkbox" class="check" checked>
+            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Log In">
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a href="#forgot">Forgot Password?</a>
+          </div>
+        </div>
+        <div class="sign-up-htm">
+          <div class="group">
+            <label for="name" class="label">Full Name</label>
+            <input id="name" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="useremail" class="label">Company Email</label>
+            <input id="useremail" type="email" class="input">
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Password</label>
+            <input id="pass" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <label for="cnfrmpass" class="label">confirm Password</label>
+            <input id="cnfrmpass" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <label for="mobile" class="label">Mobile No</label>
+            <input id="mobile" type="number" class="input">
+          </div>
+          <div class="group">
+            <label for="gender" class="label">Gender:
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio"  name="gender" value="fmale">Female</label>
+          </div>
+          <div class="group">
+          <label for="usertype" class="label">User Type&nbsp;&nbsp;&nbsp;
+<select name="usertype" id="usertype">
+    <option value="Admin">Admin</option>
+  <option value="Recruiter">Recruiter</option>
+  <option value="Accounts">Accounts</option>
+  <option value="BD">Business Development</option>
+  <option value="Digital">Digital Marketing</option></label>
+
+</select>
+</div>
+          <div class="group">
+            <input type="submit" class="button" value="Create Account">
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <label for="tab-1">Already Member?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

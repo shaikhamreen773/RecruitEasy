@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url("../Media/background1.jpg");
+      position:inherit;   
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin: 190px;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 98%;
+      height: 80px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+.btn {
+      
+      margin-left:25px;
+      display: inline-block;
+      width:20%;
+      padding: 50px 35px;
+      background-color:white ;
+      color: #D03737;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 50px;
+   
+      animation: bounce .8s;
+    
+    }
+ 
+  .btn-5 {
+  border: 0 solid;
+  
+  outline: 2px solid;
+  outline-color: #0C1248;;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px 5px #D03737;
+  outline-offset: 5px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+@keyframes bounce {
+  to { transform: scale(0.90); }
+}
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    .message{
+      margin-center: 15px;
+      color:#0C1248 ;
+
+    }
+
+    /* Adjust the icon styles as needed */
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <br>
+      <a href="Master.html"><img  src="../Media/RE2.png" alt="Logo"></a>
+    </div>
+    <div class="message">
+      Welcome Amreen Shaikh
+    </div>
+    <div class="icons">
+      <div class="icon">
+        <img src="../Media/Notify.png" alt="Notification">
+      </div>
+      <div class="icon">
+        <img src="../Media/search.png" alt="Search">
+      </div>
+      <div class="icon">
+        <img src="../Media/login.png" alt="Login">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+ <a  href="../Registration/Index.html" class="btn btn-5"><img src="../Media/Candidate.png"><br>Candidate Database</a >
+        <a  href="../Registration/Index.html" class="btn btn-5"><img src="../Media/Client.png"><br>Client Database</a >
+     <a  href="../Registration/Index.html" class="btn btn-5"><img src="../Media/Employee.png"><br>Employee Database</a  >
+   
+  <table><div> &nbsp;</div></table>
+ 
+      <a  href="../Registration/Index.html" class="btn btn-5"><img src="../Media/Position.png"><br>Position</a >
+     <a  href="../Registration/Index.html" class="btn btn-5"><img src="../Media/Mailer.png"><br>Mailer</a  >
+     <a  href="../Registration/Index.html" class="btn btn-5"><img src="../Media/Accounts.png"><br>Accounts</a >
+   </div>
+</body>
+</html>
